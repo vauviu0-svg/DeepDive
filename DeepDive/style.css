@@ -1,0 +1,217 @@
+/* --- Системные переменные (Цвета и шрифты) --- */
+:root {
+    --bg-main: #121212;
+    --bg-card: #1e1e1e;
+    --bg-panel: #1a1a1a;
+    --text-main: #ffffff;
+    --text-muted: #aaaaaa;
+    --blue-primary: #2196f3;
+    --blue-light: #64b5f6;
+    --transition: all 0.3s ease;
+}
+
+/* --- Базовые сбросы --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    min-height: calc(100vh - 300px); /* Чтобы футер не прыгал вверх */
+}
+
+/* --- Навигация 3 справа / 3 слева + Лого по центру --- */
+header {
+    background: var(--bg-card);
+    padding: 0 2rem;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 80px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.nav-group {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex: 1;
+}
+
+.nav-group.left { justify-content: flex-start; }
+.nav-group.right { justify-content: flex-end; }
+
+.nav-group a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-group a:hover, .nav-group a.active {
+    color: var(--blue-light);
+}
+
+/* Центрированный логотип */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--blue-primary);
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 0 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.logo span.white {
+    color: #ffffff; /* Белый DEEP */
+}
+
+/* --- Сетка и Карточки --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue-primary);
+    box-shadow: 0 8px 24px rgba(33, 150, 243, 0.1);
+}
+
+/* Изображения пещер в карточках */
+.card-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    object-fit: cover;
+    border: 1px solid #333;
+}
+
+/* --- Кнопки --- */
+.btn {
+    background: var(--blue-primary);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--blue-light);
+}
+
+/* --- Таблицы (для Снаряжения) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+th, td {
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    color: var(--blue-primary);
+    font-weight: 600;
+}
+
+/* --- Формы (для Авторизации) --- */
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    background: #252525;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--blue-primary);
+}
+
+/* --- Подвал сайта (Футер) --- */
+footer {
+    background: var(--bg-panel);
+    padding: 4rem 2rem 2rem;
+    border-top: 1px solid #222;
+    margin-top: 5rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.footer-section h4 {
+    color: var(--blue-primary);
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.footer-section p, .footer-section li, .footer-section a {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: var(--blue-light);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #222;
+    font-size: 0.85rem;
+    color: #555;
+}

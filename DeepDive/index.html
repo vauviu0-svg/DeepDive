@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepDive | Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <ul class="nav-group left">
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="caves.html">Пещеры</a></li>
+            <li><a href="reports.html">Отчёты</a></li>
+        </ul>
+
+        <div class="logo" onclick="window.location.href='index.html'">
+            <span class="white">DEEP</span>DIVE
+        </div>
+
+        <ul class="nav-group right">
+            <li><a href="expeditions.html">Экспедиции</a></li>
+            <li><a href="equipment.html">Снаряжение</a></li>
+            <li><a href="auth.html">Войти</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="container">
+    <div style="margin-bottom: 3rem; background: #1e1e1e; padding: 30px; border-radius: 12px; border: 1px solid #333;">
+        <h1 style="font-size: 2.5rem; font-weight: 300; margin-bottom: 0.5rem;">Платформа <strong>DeepDive</strong></h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem;">Управление спелеологическими данными: пещеры, маршруты, экспедиции и сообщество.</p>
+    </div>
+
+    <div class="grid">
+        <!-- Краткая карточка Пещеры -->
+        <div class="card" onclick="window.location.href='caves.html'" style="cursor: pointer;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem;">
+                <span style="font-size: 1.2rem; font-weight: 600; color: #fff;">Пещеры</span>
+                <span style="color: var(--blue-primary); font-size: 1.5rem;">🕳️</span>
+            </div>
+            <div style="margin: 0.6rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Название</span><span>Ординская</span>
+            </div>
+            <div style="margin: 0.6rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Регион</span><span>Пермский край</span>
+            </div>
+            <div style="margin: 0.6rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Сложность</span>
+                <span style="background: rgba(33, 150, 243, 0.15); color: var(--blue-light); padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">Высокая</span>
+            </div>
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #2a2a2a; color: var(--text-muted); font-size: 0.75rem; display: flex; justify-content: space-between;">
+                <span>📸 12 фото</span><span style="color: var(--blue-light);">→</span>
+            </div>
+        </div>
+
+        <!-- Краткая карточка Экспедиции -->
+        <div class="card" onclick="window.location.href='expeditions.html'" style="cursor: pointer;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem;">
+                <span style="font-size: 1.2rem; font-weight: 600; color: #fff;">Экспедиции</span>
+                <span style="color: var(--blue-primary); font-size: 1.5rem;">⛰️</span>
+            </div>
+            <div style="margin: 0.6rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Руководитель</span><span>Иванов А.А.</span>
+            </div>
+            <div style="margin: 0.6rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Дата</span><span>15.06.2026</span>
+            </div>
+            <div style="margin: 0.6rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Статус</span>
+                <span style="padding: 0.2rem 0.8rem; border-radius: 10px; font-size: 0.75rem; background: #e65100; color: #ffcc80;">Активна</span>
+            </div>
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #2a2a2a; color: var(--text-muted); font-size: 0.75rem; display: flex; justify-content: space-between;">
+                <span>👥 8 чел.</span><span style="color: var(--blue-light);">→</span>
+            </div>
+        </div>
+
+        <!-- Краткая карточка Отчёты -->
+        <div class="card" onclick="window.location.href='reports.html'" style="cursor: pointer;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem;">
+                <span style="font-size: 1.2rem; font-weight: 600; color: #fff;">Отчёты</span>
+                <span style="color: var(--blue-primary); font-size: 1.5rem;">📄</span>
+            </div>
+            <div style="margin: 0.6rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Маршрут</span><span>Северный сброс</span>
+            </div>
+            <div style="margin: 0.6rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Автор</span><span>Speleo_Pro</span>
+            </div>
+            <div style="margin: 0.6rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Дата</span><span>01.06.2026</span>
+            </div>
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #2a2a2a; color: var(--text-muted); font-size: 0.75rem; display: flex; justify-content: space-between;">
+                <span>📊 3 фото</span><span style="color: var(--blue-light);">→</span>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>DeepDive</h4>
+            <p>Цифровая экосистема для профессиональных спелеологов и исследователей подземных миров.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Навигация</h4>
+            <ul style="list-style: none;">
+                <li><a href="caves.html">Каталог пещер</a></li>
+                <li><a href="expeditions.html">Поиск экспедиций</a></li>
+                <li><a href="reports.html">База отчетов</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Контакты</h4>
+            <p>Email: vauviu0@gmail.com</p>
+            <p>Тел: +7 (960) 343-85-82</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 DeepDive | Разработано для Спелеотуристов
+    </div>
+</footer>
+
+</body>
+</html>

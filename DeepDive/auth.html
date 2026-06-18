@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepDive | Авторизация</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <ul class="nav-group left">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="caves.html">Пещеры</a></li>
+            <li><a href="reports.html">Отчёты</a></li>
+        </ul>
+
+        <div class="logo" onclick="window.location.href='index.html'">
+            <span class="white">DEEP</span>DIVE
+        </div>
+
+        <ul class="nav-group right">
+            <li><a href="expeditions.html">Экспедиции</a></li>
+            <li><a href="equipment.html">Снаряжение</a></li>
+            <li><a href="auth.html" class="active">Войти</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="container" style="max-width: 450px; margin-top: 4rem; margin-bottom: 4rem;">
+    <div class="card">
+        <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--blue-primary);">Личный кабинет</h3>
+        <form onsubmit="event.preventDefault(); alert('Авторизация выполнена успешно!'); window.location.href='index.html';">
+            <div class="form-group" style="margin-bottom: 1.2rem;">
+                <label style="display: block; margin-bottom: .5rem; color: var(--text-muted);">Логин или Email</label>
+                <input type="text" placeholder="Введите имя пользователя..." required>
+            </div>
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: .5rem; color: var(--text-muted);">Пароль</label>
+                <input type="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn" style="width: 100%; padding: .8rem; font-size: 1rem;">Авторизоваться</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>DeepDive</h4>
+            <p>Цифровая экосистема для профессиональных спелеологов и исследователей подземных миров.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Навигация</h4>
+            <ul style="list-style: none;">
+                <li><a href="caves.html">Каталог пещер</a></li>
+                <li><a href="expeditions.html">Поиск экспедиций</a></li>
+                <li><a href="reports.html">База отчетов</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Контакты</h4>
+            <p>Email: vauviu0@gmail.com</p>
+            <p>Тел: +7 (960) 343-85-82</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 DeepDive | Разработано для Спелеотуристов
+    </div>
+</footer>
+
+</body>
+</html>

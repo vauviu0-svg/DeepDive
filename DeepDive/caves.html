@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepDive | Каталог пещер</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <ul class="nav-group left">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="caves.html" class="active">Пещеры</a></li>
+            <li><a href="reports.html">Отчёты</a></li>
+        </ul>
+
+        <div class="logo" onclick="window.location.href='index.html'">
+            <span class="white">DEEP</span>DIVE
+        </div>
+
+        <ul class="nav-group right">
+            <li><a href="expeditions.html">Экспедиции</a></li>
+            <li><a href="equipment.html">Снаряжение</a></li>
+            <li><a href="auth.html">Войти</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h2 style="color: var(--blue-primary);">Каталог пещер</h2>
+        <button class="btn" onclick="alert('Форма добавления пещеры находится в разработке')">Добавить пещеру</button>
+    </div>
+
+    <!-- Фильтры (согласно ТЗ) -->
+    <div class="card" style="margin-bottom: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 200px;">
+            <input type="text" id="cave-search" placeholder="Поиск пещеры по названию...">
+        </div>
+        <div style="width: 180px;">
+            <select id="cave-region">
+                <option value="">Все регионы</option>
+                <option value="Пермский край">Пермский край</option>
+            </select>
+        </div>
+        <div style="width: 180px;">
+            <select id="cave-difficulty">
+                <option value="">Любая сложность</option>
+                <option value="Высокая">Высокая</option>
+                <option value="Средняя">Средняя</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="grid">
+        <!-- Карточка 1  -->
+        <div class="card cave-card" data-region="Пермский край" data-difficulty="Высокая">
+            <img src="https://i.pinimg.com/originals/84/03/4c/84034cae8a15e53cc6349360bd6f9656.png?nii=t" alt="Ординская пещера" class="card-image">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-size: 1.2rem; font-weight: 600; color: #fff;">Ординская</span>
+                <span style="color: var(--blue-primary); font-size: 1.5rem;">🕳️</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Регион</span><span>Пермский край</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Глубина</span><span>45 м</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Протяжённость</span><span>4600 м</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Сложность</span>
+                <span style="background: rgba(244, 67, 54, 0.15); color: #f44336; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">Высокая</span>
+            </div>
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #2a2a2a; font-size: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                <span>🌍 Широта: 57.27°</span>
+                <button class="btn" onclick="alert('Открыта карта пещеры Ординская')">Карта</button>
+            </div>
+        </div>
+
+        <!-- Карточка 2  -->
+        <div class="card cave-card" data-region="Пермский край" data-difficulty="Средняя">
+            <img src="https://i.pinimg.com/originals/84/03/4c/84034cae8a15e53cc6349360bd6f9656.png?nii=t" alt="Кунгурская пещера" class="card-image">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-size: 1.2rem; font-weight: 600; color: #fff;">Кунгурская</span>
+                <span style="color: var(--blue-primary); font-size: 1.5rem;">🕳️</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Регион</span><span>Пермский край</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Глубина</span><span>27 м</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Протяжённость</span><span>5700 м</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Сложность</span>
+                <span style="background: #1b5e20; color: #81c784; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">Средняя</span>
+            </div>
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #2a2a2a; font-size: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                <span>❄️ Ледяная</span>
+                <button class="btn" onclick="alert('Открыта карта пещеры Кунгурская')">Карта</button>
+            </div>
+        </div>
+        <!-- Карточка 3 -->
+        <div class="card cave-card" data-region="Пермский край" data-difficulty="Средняя">
+            <img src="https://i.pinimg.com/originals/84/03/4c/84034cae8a15e53cc6349360bd6f9656.png?nii=t" alt="Кунгурская пещера" class="card-image">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-size: 1.2rem; font-weight: 600; color: #fff;">Кунгурская</span>
+                <span style="color: var(--blue-primary); font-size: 1.5rem;">🕳️</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Регион</span><span>Пермский край</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Глубина</span><span>27 м</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Протяжённость</span><span>5700 м</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Сложность</span>
+                <span style="background: #1b5e20; color: #81c784; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">Средняя</span>
+            </div>
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #2a2a2a; font-size: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                <span>❄️ Ледяная</span>
+                <button class="btn" onclick="alert('Открыта карта пещеры Кунгурская')">Карта</button>
+            </div>
+        </div>
+        <!-- Карточка 4 -->
+        <div class="card cave-card" data-region="Пермский край" data-difficulty="Средняя">
+            <img src="https://i.pinimg.com/originals/84/03/4c/84034cae8a15e53cc6349360bd6f9656.png?nii=t" alt="Кунгурская пещера" class="card-image">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-size: 1.2rem; font-weight: 600; color: #fff;">Кунгурская</span>
+                <span style="color: var(--blue-primary); font-size: 1.5rem;">🕳️</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Регион</span><span>Пермский край</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Глубина</span><span>27 м</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Протяжённость</span><span>5700 м</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Сложность</span>
+                <span style="background: #1b5e20; color: #81c784; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">Средняя</span>
+            </div>
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #2a2a2a; font-size: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                <span>❄️ Ледяная</span>
+                <button class="btn" onclick="alert('Открыта карта пещеры Кунгурская')">Карта</button>
+            </div>
+        </div>
+        <!-- Карточка 5 -->
+        <div class="card cave-card" data-region="Пермский край" data-difficulty="Средняя">
+            <img src="https://i.pinimg.com/originals/84/03/4c/84034cae8a15e53cc6349360bd6f9656.png?nii=t" alt="Кунгурская пещера" class="card-image">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-size: 1.2rem; font-weight: 600; color: #fff;">Кунгурская</span>
+                <span style="color: var(--blue-primary); font-size: 1.5rem;">🕳️</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Регион</span><span>Пермский край</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Глубина</span><span>27 м</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Протяжённость</span><span>5700 м</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Сложность</span>
+                <span style="background: #1b5e20; color: #81c784; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem;">Средняя</span>
+            </div>
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #2a2a2a; font-size: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                <span>❄️ Ледяная</span>
+                <button class="btn" onclick="alert('Открыта карта пещеры Кунгурская')">Карта</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>DeepDive</h4>
+            <p>Цифровая экосистема для профессиональных спелеологов и исследователей подземных миров.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Навигация</h4>
+            <ul style="list-style: none;">
+                <li><a href="caves.html">Каталог пещер</a></li>
+                <li><a href="expeditions.html">Поиск экспедиций</a></li>
+                <li><a href="reports.html">База отчетов</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Контакты</h4>
+            <p>Email: vauviu0@gmail.com</p>
+            <p>Тел: +7 (960) 343-85-82</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 DeepDive | Разработано для Спелеотуристов
+    </div>
+</footer>
+
+</body>
+</html>

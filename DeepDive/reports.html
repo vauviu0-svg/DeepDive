@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepDive | Отчёты по маршрутам</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <ul class="nav-group left">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="caves.html">Пещеры</a></li>
+            <li><a href="reports.html" class="active">Отчёты</a></li>
+        </ul>
+
+        <div class="logo" onclick="window.location.href='index.html'">
+            <span class="white">DEEP</span>DIVE
+        </div>
+
+        <ul class="nav-group right">
+            <li><a href="expeditions.html">Экспедиции</a></li>
+            <li><a href="equipment.html">Снаряжение</a></li>
+            <li><a href="auth.html">Войти</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h2 style="color: var(--blue-primary);">Отчёты по маршрутам</h2>
+        <button class="btn" id="btn-add-report" style="font-size: 1rem; padding: 0.5rem 1.5rem;">+ Написать отчёт</button>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem;">
+                <span style="font-size: 1.2rem; font-weight: 600; color: #fff;">Северный сброс</span>
+                <span style="color: var(--blue-primary); font-size: 1.5rem;">📄</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Автор</span><span>Speleo_Pro</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Дата</span><span>01.06.2026</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Маршрут</span><span>Ординская</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 10px 0;">Сложный спуск у входа, требуется доп. страховка...</p>
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #2a2a2a; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem;">
+                <span>📎 3 фото</span>
+                <button class="btn" onclick="alert('Полный текст отчёта «Северный сброс»')">Читать</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem;">
+                <span style="font-size: 1.2rem; font-weight: 600; color: #fff;">Ледяной грот</span>
+                <span style="color: var(--blue-primary); font-size: 1.5rem;">📄</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Автор</span><span>Icy_Explorer</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Дата</span><span>28.05.2026</span>
+            </div>
+            <div style="margin: 0.4rem 0; display: flex; justify-content: space-between; font-size: 0.9rem;">
+                <span style="color: var(--text-muted);">Маршрут</span><span>Кунгурская</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 10px 0;">Невероятные ледяные кристаллы в зале №3...</p>
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid #2a2a2a; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem;">
+                <span>📎 5 фото</span>
+                <button class="btn" onclick="alert('Полный текст отчёта «Ледяной грот»')">Читать</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>DeepDive</h4>
+            <p>Цифровая экосистема для профессиональных спелеологов и исследователей подземных миров.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Навигация</h4>
+            <ul style="list-style: none;">
+                <li><a href="caves.html">Каталог пещер</a></li>
+                <li><a href="expeditions.html">Поиск экспедиций</a></li>
+                <li><a href="reports.html">База отчетов</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Контакты</h4>
+            <p>Email: vauviu0@gmail.com</p>
+            <p>Тел: +7 (960) 343-85-82</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 DeepDive | Разработано для Спелеотуристов
+    </div>
+</footer>
+
+</body>
+</html>
